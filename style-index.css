@@ -1,0 +1,40 @@
+:root {
+    --grey: #545F66;
+    --light: #FFF8EB;
+    --blue: #85C7F2;
+    --green: #8FD5A6;
+    --pink: #F92A82;
+}
+
+html {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--light);
+}
+
+p {
+    color: var(--light)
+}
+
+p:hover {
+    color: var(--grey)
+}
+
+img {
+    width: 60vw;
+    height: 20vh;
+    margin: auto;
+    border: 5px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+img:hover {
+    background-color: var(--pink);
+}
+
+h1 {
+    background-color: var(--pink);
+}
