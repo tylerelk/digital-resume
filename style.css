@@ -60,3 +60,33 @@ ul {
     width: 80vw;
     text-align: center;
 }
+
+/* Dev-specific */
+
+.dev-section {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hi {
+    font-size: 10em;
+}
+
+#dev-welcome {
+    background-color: var(--grey);
+    color: var(--light);
+    text-align: center;
+}
+
+#dev-about {
+    background-color: var(--blue);
+    color: var(--grey);
+    text-align: center;
+    align-items: baseline;
+}
