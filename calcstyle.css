@@ -1,0 +1,91 @@
+:root {
+    --black: #545F66;
+    --white: #85c6f2ad;
+    --red: #f92a8483;
+    --grey: #FFF8EB;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, var(--grey), var(--black));
+}
+
+.output {
+    border: 2px solid black;
+}
+
+.calculator {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    background: var(--black);
+    border: 5px solid black;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.input, .spanned {
+    font-size: 2rem;
+    border: 3px solid var(--black);
+    border-radius: 30px;
+    background-color: var(--white);
+    outline: none;
+}
+
+.input:hover, .spanned:hover {
+    color: var(--red);
+    box-shadow: 0 0 0 2px var(--red) inset;
+}
+
+.spanned {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: var(--red);
+    border-bottom: 5px solid black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0.5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-input {
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+.current-input {
+    color: black;
+    font-size: 2.5rem;
+}
+
+h4 {
+    text-align: center;
+}
+
+h4 a {
+    color: black;
+}
+
+@media (max-width: 600px) {
+    * {
+        color: black;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+}
