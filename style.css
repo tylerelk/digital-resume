@@ -10,7 +10,13 @@ html {
     font-family: 'Roboto Mono', monospace;
     background-color: var(--light);
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
+    height: -webkit-fill-available;
+}
+
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 .heading {
@@ -18,10 +24,19 @@ html {
     scroll-snap-align: start;
 }
 
+.heading:nth-of-type(1) {
+    text-align: center;
+    font-size: 3em;
+}
+
 .section-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#header-image {
+    width: 60vw;
 }
 
 .company-logo {
@@ -42,6 +57,7 @@ ul {
     padding: 1rem;
     width: 80vw;
     text-align: center;
+    scroll-snap-align: start;
 }
 
 .cert-tile {
@@ -52,6 +68,7 @@ ul {
     padding: 1rem;
     width: 80vw;
     text-align: center;
+    scroll-snap-align: start;
 }
 
 .misc-tile {
@@ -61,6 +78,12 @@ ul {
     margin: 1em auto;
     padding: 1rem;
     width: 80vw;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+.footer-section {
+    height: 100vh;
     text-align: center;
 }
 
