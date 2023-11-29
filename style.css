@@ -11,8 +11,13 @@ html {
     background-color: var(--light);
 }
 
+body {
+    scroll-snap-type: y mandatory;
+}
+
 .heading {
     border-bottom: 5px solid var(--blue);
+    scroll-snap-align: start;
 }
 
 .section-container {
