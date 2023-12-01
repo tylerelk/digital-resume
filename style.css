@@ -6,6 +6,16 @@
     --pink: #F92A82;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
 html {
     font-family: 'Roboto Mono', monospace;
     background-color: var(--light);
@@ -23,11 +33,14 @@ body {
 .heading {
     border-bottom: 5px solid var(--blue);
     scroll-snap-align: start;
+    font-size: 1.5rem;
+    margin: 2rem auto;
 }
 
 .heading:nth-of-type(1) {
     text-align: center;
     font-size: 3em;
+    margin: 0;
 }
 
 .section-container {
@@ -38,10 +51,11 @@ body {
 
 #header-image {
     width: 60vw;
+    margin: 2rem auto;
 }
 
 .company-logo {
-    width: 80vw;
+    width: 60vw;
     margin: 1em auto;
 }
 
@@ -90,23 +104,24 @@ ul {
 
 /* Dev-specific */
 
-/* #dev-scroll-container {
-    scroll-snap-type: y mandatory;
-} */
-
 .dev-section {
     width: 100%;
-    height: 100vh;
-    scroll-snap-align: start;
+    min-height: 100vh;
     margin: 0;
 }
 
-.grid-container {
-    width: 90vw;
+.dev-section ul, p, h3 {
+    padding: 1rem;
+    margin: auto;
+}
+
+.dev-tile-container {
+    width: 90%;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 
 .dev-section:nth-of-type(odd) {
@@ -143,13 +158,23 @@ ul {
 }
 
 .project-tile {
-    width: 30%;
-    text-align: center;
+    width: 80%;
+    margin: 1rem auto;
+    font-size: 0.9em;
     border: 5px solid var(--light);
     background-color: var(--pink);
     border-radius: 20px;
-    padding: 10px;
-    margin: 1rem 0;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.project-tile img {
+    width: 8rem;
+    height: 8rem;
+    margin: 0;
 }
 
 .project-tile a {
